@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="discription" content=""Create amazing AI photo prompts with Promptify AI." />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Promptify AI-AI photo promptss</title>
+<title>Promptify AI</title>
 
 <style>
-*{
-    box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
     margin:0;
@@ -18,8 +15,6 @@ body{
     background:#f6f3ff;
     color:#202020;
 }
-
-/* ---------- HOME ---------- */
 
 #home{
     min-height:100vh;
@@ -32,8 +27,6 @@ body{
     background:linear-gradient(135deg,#7567ff,#b58cff,#72d8ff);
 }
 
-/* Cartoon bubbles */
-
 .shape{
     position:absolute;
     border-radius:50%;
@@ -41,33 +34,10 @@ body{
     opacity:.25;
 }
 
-.s1{
-    width:150px;
-    height:150px;
-    top:-40px;
-    left:-40px;
-}
-
-.s2{
-    width:100px;
-    height:100px;
-    right:20px;
-    top:70px;
-}
-
-.s3{
-    width:180px;
-    height:180px;
-    bottom:-70px;
-    left:20px;
-}
-
-.s4{
-    width:80px;
-    height:80px;
-    right:50px;
-    bottom:40px;
-}
+.s1{width:150px;height:150px;top:-40px;left:-40px;}
+.s2{width:100px;height:100px;right:20px;top:70px;}
+.s3{width:180px;height:180px;bottom:-70px;left:20px;}
+.s4{width:80px;height:80px;right:50px;bottom:40px;}
 
 .cloud{
     position:absolute;
@@ -75,15 +45,8 @@ body{
     opacity:.7;
 }
 
-.c1{
-    top:8%;
-    left:8%;
-}
-
-.c2{
-    bottom:12%;
-    right:5%;
-}
+.c1{top:8%;left:8%;}
+.c2{bottom:12%;right:5%;}
 
 .welcome-box{
     width:100%;
@@ -97,10 +60,7 @@ body{
     z-index:2;
 }
 
-.logo{
-    font-size:55px;
-    margin-bottom:5px;
-}
+.logo{font-size:55px;margin-bottom:5px;}
 
 .welcome-box h1{
     margin:5px 0;
@@ -108,9 +68,7 @@ body{
     color:#5b45d9;
 }
 
-.welcome-box h2{
-    margin:10px 0;
-}
+.welcome-box h2{margin:10px 0;}
 
 .welcome-box p{
     color:#555;
@@ -128,8 +86,6 @@ body{
     margin-top:15px;
     box-shadow:0 8px 20px rgba(98,70,229,.35);
 }
-
-/* ---------- PROMPT PAGE ---------- */
 
 #app{
     display:none;
@@ -150,9 +106,7 @@ body{
     font-size:30px;
 }
 
-.header p{
-    margin:8px 0 0;
-}
+.header p{margin:8px 0 0;}
 
 .controls{
     max-width:700px;
@@ -202,6 +156,14 @@ body{
     padding:18px;
     border-radius:20px;
     box-shadow:0 7px 22px rgba(0,0,0,.09);
+}
+
+.card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:14px;
 }
 
 .card h2{
@@ -257,8 +219,6 @@ body{
 
 <body>
 
-<!-- HOME -->
-
 <div id="home">
 
 <div class="shape s1"></div>
@@ -277,13 +237,11 @@ body{
 
 <h2>AI Photo Prompts</h2>
 
-<p>
-Welcome to Promptify AI! 🚀
-</p>
+<p>Welcome to Promptify AI! 🚀</p>
 
 <p>
 Yahan aapko AI images banane ke liye
-50 creative aur ready-to-use photo prompts milenge.
+200 creative aur ready-to-use photo prompts milenge.
 Apna favourite prompt copy karo aur
 AI image generator mein paste karke amazing images banao.
 </p>
@@ -296,13 +254,11 @@ Get Started 🚀
 </div>
 
 
-<!-- APP -->
-
 <div id="app">
 
 <div class="header">
 <h1>🎨 AI Photo Prompts</h1>
-<p>50 creative prompts for amazing AI images</p>
+<p>200 creative prompts for amazing AI images</p>
 </div>
 
 <div class="controls">
@@ -311,7 +267,7 @@ Get Started 🚀
 id="search"
 class="search"
 placeholder="🔍 Search prompts..."
-oninput="showPrompts()"
+oninput="showPrompts"
 >
 
 <div class="categories">
@@ -336,354 +292,565 @@ oninput="showPrompts()"
 
 const prompts = [
 
-["Cute Cartoon Boy",
-"Cartoon",
-"A cute cartoon boy standing in a colorful magical forest, beautiful flowers, soft sunlight, 3D cartoon style, expressive face, highly detailed, cinematic lighting."],
-
-["Flying Cloud Girl",
-"Fantasy",
-"A cute girl sitting on a fluffy flying cloud above a colorful cartoon city, magical sky, soft clouds, vibrant colors, dreamy fantasy style."],
-
-["Green Dragon",
-"Fantasy",
-"A friendly green dragon sitting beside a beautiful waterfall in a magical forest, glowing plants, colorful environment, detailed 3D cartoon style."],
-
-["Superhero Cat",
-"Animal",
-"A cute orange cat wearing a superhero costume standing on a city rooftop, dramatic sunset, funny expression, cinematic 3D cartoon style."],
-
-["Future Robot",
-"Cartoon",
-"A friendly futuristic robot walking through a colorful neon city, glowing buildings, cinematic lighting, detailed 3D animation style."],
-
-["Tea Panda",
-"Animal",
-"A cute panda drinking tea inside a cozy cartoon cafe, warm lights, wooden furniture, adorable expression, high quality 3D style."],
-
-["Moon Astronaut",
-"Space",
-"A young astronaut standing on the moon and looking at Earth, stars in the background, cinematic space lighting, detailed realistic cartoon style."],
-
-["Sky Castle",
-"Fantasy",
-"A magical castle floating above the clouds, rainbow sky, glowing windows, fantasy environment, beautiful cinematic composition."],
-
-["Wizard Rabbit",
-"Animal",
-"A cute rabbit wearing a wizard hat inside an enchanted forest, glowing mushrooms, magical particles, colorful fantasy cartoon style."],
-
-["Flying Hero",
-"Cartoon",
-"A young superhero flying above a futuristic city, clouds behind him, dramatic pose, colorful sky, cinematic 3D animation."],
-
-["Jungle Elephant",
-"Animal",
-"A cute elephant walking through a colorful tropical jungle, beautiful plants, butterflies, sunlight rays, adorable 3D cartoon style."],
-
-["Ocean Mermaid",
-"Fantasy",
-"A beautiful mermaid sitting on a rock under the ocean, colorful coral reefs, glowing fish, magical underwater lighting."],
-
-["Beach Puppy",
-"Animal",
-"A cute puppy wearing sunglasses on a tropical beach, palm trees, blue ocean, sunset, fun colorful 3D cartoon style."],
-
-["Alien Planet",
-"Space",
-"A tiny astronaut exploring a colorful alien planet, giant strange plants and mountains, cinematic lighting, highly detailed."],
-
-["Lion King",
-"Animal",
-"A powerful cartoon lion sitting on a golden throne inside a royal palace, dramatic lighting, majestic atmosphere, detailed 3D art."],
-
-["Magic Fairy",
-"Fantasy",
-"A beautiful fairy flying through an enchanted forest, glowing wings, magical particles, colorful flowers, dreamy cinematic lighting."],
-
-["Cycling Monkey",
-"Animal",
-"A funny cartoon monkey riding a small bicycle through a colorful village, happy expression, bright sunlight, 3D animation style."],
-
-["Neon City",
-"Space",
-"A futuristic neon city at night with flying cars, glowing buildings, colorful lights, cinematic atmosphere, ultra detailed."],
-
-["Winter Snowman",
-"Fantasy",
-"A cute snowman standing in a magical winter village, falling snow, glowing houses, warm lights, beautiful cartoon style."],
-
-["Young Wizard",
-"Fantasy",
-"A young wizard casting a glowing magical spell inside an ancient castle, magical particles, dramatic lighting, cinematic fantasy art."],
-
-["Green Snake",
-"Animal",
-"A cute green snake standing like a human in a colorful jungle, funny expression, other small snakes nearby, 3D cartoon style."],
-
-["Princess Garden",
-"Fantasy",
-"A beautiful princess walking through a magical flower garden, butterflies flying around her, colorful flowers, fantasy cartoon style."],
-
-["Penguin City",
-"Animal",
-"A cute penguin wearing a winter jacket walking through a colorful snowy city, soft snowfall, adorable 3D animation."],
-
-["Friendly Robot",
-"Cartoon",
-"A giant friendly robot helping children in a futuristic colorful city, bright sky, cinematic cartoon style, detailed environment."],
-
-["Fox Campfire",
-"Animal",
-"A cute fox sitting beside a campfire in a magical forest at night, stars above, glowing fire, cozy cinematic cartoon style."],
+/* ---------- ORIGINAL 50 ---------- */
+
+["Cute Cartoon Boy","Cartoon",
+"A cute cartoon boy standing in a colorful magical forest, beautiful flowers, soft sunlight, 3D cartoon style, expressive face, highly detailed, cinematic lighting.",
+"https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=900&q=80"],
+
+["Flying Cloud Girl","Fantasy",
+"A cute girl sitting on a fluffy flying cloud above a colorful cartoon city, magical sky, soft clouds, vibrant colors, dreamy fantasy style.",
+"https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=80"],
+
+["Green Dragon","Fantasy",
+"A friendly green dragon sitting beside a beautiful waterfall in a magical forest, glowing plants, colorful environment, detailed 3D cartoon style.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
+
+["Superhero Cat","Animal",
+"A cute orange cat wearing a superhero costume standing on a city rooftop, dramatic sunset, funny expression, cinematic 3D cartoon style.",
+"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=900&q=80"],
+
+["Future Robot","Cartoon",
+"A friendly futuristic robot walking through a colorful neon city, glowing buildings, cinematic lighting, detailed 3D animation style.",
+"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80"],
+
+["Tea Panda","Animal",
+"A cute panda drinking tea inside a cozy cartoon cafe, warm lights, wooden furniture, adorable expression, high quality 3D style.",
+"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=900&q=80"],
+
+["Moon Astronaut","Space",
+"A young astronaut standing on the moon and looking at Earth, stars in the background, cinematic space lighting, detailed realistic cartoon style.",
+"https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=900&q=80"],
+
+["Sky Castle","Fantasy",
+"A magical castle floating above the clouds, rainbow sky, glowing windows, fantasy environment, beautiful cinematic composition.",
+"https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=80"],
+
+["Wizard Rabbit","Animal",
+"A cute rabbit wearing a wizard hat inside an enchanted forest, glowing mushrooms, magical particles, colorful fantasy cartoon style.",
+"https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=900&q=80"],
+
+["Flying Hero","Cartoon",
+"A young superhero flying above a futuristic city, clouds behind him, dramatic pose, colorful sky, cinematic 3D animation.",
+"https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"],
+
+["Jungle Elephant","Animal",
+"A cute elephant walking through a colorful tropical jungle, beautiful plants, butterflies, sunlight rays, adorable 3D cartoon style.",
+"https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=900&q=80"],
+
+["Ocean Mermaid","Fantasy",
+"A beautiful mermaid sitting on a rock under the ocean, colorful coral reefs, glowing fish, magical underwater lighting.",
+"https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=900&q=80"],
+
+["Beach Puppy","Animal",
+"A cute puppy wearing sunglasses on a tropical beach, palm trees, blue ocean, sunset, fun colorful 3D cartoon style.",
+"https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80"],
+
+["Alien Planet","Space",
+"A tiny astronaut exploring a colorful alien planet, giant strange plants and mountains, cinematic lighting, highly detailed.",
+"https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=900&q=80"],
+
+["Lion King","Animal",
+"A powerful cartoon lion sitting on a golden throne inside a royal palace, dramatic lighting, majestic atmosphere, detailed 3D art.",
+"https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80"],
+
+["Magic Fairy","Fantasy",
+"A beautiful fairy flying through an enchanted forest, glowing wings, magical particles, colorful flowers, dreamy cinematic lighting.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
+
+["Cycling Monkey","Animal",
+"A funny cartoon monkey riding a small bicycle through a colorful village, happy expression, bright sunlight, 3D animation style.",
+"https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=900&q=80"],
+
+["Neon City","Space",
+"A futuristic neon city at night with flying cars, glowing buildings, colorful lights, cinematic atmosphere, ultra detailed.",
+"https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"],
+
+["Winter Snowman","Fantasy",
+"A cute snowman standing in a magical winter village, falling snow, glowing houses, warm lights, beautiful cartoon style.",
+"https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?auto=format&fit=crop&w=900&q=80"],
+
+["Young Wizard","Fantasy",
+"A young wizard casting a glowing magical spell inside an ancient castle, magical particles, dramatic lighting, cinematic fantasy art.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
+
+["Green Snake","Animal",
+"A cute green snake standing like a human in a colorful jungle, funny expression, other small snakes nearby, 3D cartoon style.",
+"https://images.unsplash.com/photo-1531386151447-fd76ad50012f?auto=format&fit=crop&w=900&q=80"],
+
+["Princess Garden","Fantasy",
+"A beautiful princess walking through a magical flower garden, butterflies flying around her, colorful flowers, fantasy cartoon style.",
+"https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80"],
+
+["Penguin City","Animal",
+"A cute penguin wearing a winter jacket walking through a colorful snowy city, soft snowfall, adorable 3D animation.",
+"https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?auto=format&fit=crop&w=900&q=80"],
+
+["Friendly Robot","Cartoon",
+"A giant friendly robot helping children in a futuristic colorful city, bright sky, cinematic cartoon style, detailed environment.",
+"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80"],
+
+["Fox Campfire","Animal",
+"A cute fox sitting beside a campfire in a magical forest at night, stars above, glowing fire, cozy cinematic cartoon style.",
+"https://images.unsplash.com/photo-1516934024742-b461fba47600?auto=format&fit=crop&w=900&q=80"],
 
-["Pirate Ship",
-"Fantasy",
-"A colorful pirate ship sailing across a magical ocean during sunset, dramatic clouds, fantasy cartoon illustration."],
+["Pirate Ship","Fantasy",
+"A colorful pirate ship sailing across a magical ocean during sunset, dramatic clouds, fantasy cartoon illustration.",
+"https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"],
 
-["Baby Elephant",
-"Animal",
-"A cute baby elephant playing with colorful butterflies in a flower field, bright sunlight, adorable 3D cartoon art."],
+["Baby Elephant","Animal",
+"A cute baby elephant playing with colorful butterflies in a flower field, bright sunlight, adorable 3D cartoon art.",
+"https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=900&q=80"],
 
-["Superhero Dog",
-"Animal",
-"A superhero dog protecting a colorful cartoon city, dramatic clouds, heroic pose, cinematic lighting, 3D animation."],
-
-["Magic Tree",
-"Fantasy",
-"A giant magical tree with glowing leaves in an enchanted forest, colorful flowers, magical particles, highly detailed fantasy art."],
+["Superhero Dog","Animal",
+"A superhero dog protecting a colorful cartoon city, dramatic clouds, heroic pose, cinematic lighting, 3D animation.",
+"https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80"],
 
-["Skateboard Panda",
-"Animal",
-"A cute panda riding a skateboard through a colorful city street, funny expression, dynamic pose, 3D cartoon style."],
+["Magic Tree","Fantasy",
+"A giant magical tree with glowing leaves in an enchanted forest, colorful flowers, magical particles, highly detailed fantasy art.",
+"https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"],
 
-["Ancient Temple",
-"Fantasy",
-"A young explorer discovering an ancient temple hidden inside a dense jungle, mysterious atmosphere, cinematic fantasy lighting."],
+["Skateboard Panda","Animal",
+"A cute panda riding a skateboard through a colorful city street, funny expression, dynamic pose, 3D cartoon style.",
+"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=900&q=80"],
 
-["Rocket Kitten",
-"Space",
-"A cute kitten sitting inside a colorful rocket ship, looking through the window at planets and stars, adorable 3D cartoon style."],
+["Ancient Temple","Fantasy",
+"A young explorer discovering an ancient temple hidden inside a dense jungle, mysterious atmosphere, cinematic fantasy lighting.",
+"https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80"],
 
-["Snow Castle",
-"Fantasy",
-"A magical ice castle on top of a snowy mountain, glowing windows, clouds surrounding the mountain, cinematic fantasy art."],
+["Rocket Kitten","Space",
+"A cute kitten sitting inside a colorful rocket ship, looking through the window at planets and stars, adorable 3D cartoon style.",
+"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=900&q=80"],
 
-["Blue Monster",
-"Cartoon",
-"A cute friendly blue monster sitting inside a cozy colorful bedroom, funny expression, soft lighting, 3D animation style."],
+["Snow Castle","Fantasy",
+"A magical ice castle on top of a snowy mountain, glowing windows, clouds surrounding the mountain, cinematic fantasy art.",
+"https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?auto=format&fit=crop&w=900&q=80"],
 
-["Butterfly Fairy",
-"Fantasy",
-"A magical fairy flying above a colorful flower garden, giant butterflies around her, glowing particles, dreamy fantasy style."],
+["Blue Monster","Cartoon",
+"A cute friendly blue monster sitting inside a cozy colorful bedroom, funny expression, soft lighting, 3D animation style.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
 
-["Cooking Bear",
-"Animal",
-"A cute bear cooking food inside a tiny cartoon kitchen, funny expression, warm lights, detailed 3D animation."],
+["Butterfly Fairy","Fantasy",
+"A magical fairy flying above a colorful flower garden, giant butterflies around her, glowing particles, dreamy fantasy style.",
+"https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80"],
 
-["Space Station",
-"Space",
-"A futuristic astronaut walking through a giant neon space station, glowing screens, cinematic lighting, detailed environment."],
+["Cooking Bear","Animal",
+"A cute bear cooking food inside a tiny cartoon kitchen, funny expression, warm lights, detailed 3D animation.",
+"https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=900&q=80"],
 
-["Rabbit Car",
-"Animal",
-"A cute rabbit driving a tiny colorful car through a cartoon town, bright houses, funny expression, playful 3D style."],
+["Space Station","Space",
+"A futuristic astronaut walking through a giant neon space station, glowing screens, cinematic lighting, detailed environment.",
+"https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=900&q=80"],
 
-["Underwater City",
-"Fantasy",
-"A magical underwater city filled with glowing buildings, colorful fish, coral reefs and beautiful blue lighting."],
+["Rabbit Car","Animal",
+"A cute rabbit driving a tiny colorful car through a cartoon town, bright houses, funny expression, playful 3D style.",
+"https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=900&q=80"],
 
-["Mountain Warrior",
-"Fantasy",
-"A young warrior standing on a mountain during sunset, dramatic clouds, wind blowing clothes, cinematic fantasy cartoon style."],
+["Underwater City","Fantasy",
+"A magical underwater city filled with glowing buildings, colorful fish, coral reefs and beautiful blue lighting.",
+"https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=900&q=80"],
 
-["Cute Dinosaur",
-"Animal",
-"A friendly baby dinosaur walking through a colorful prehistoric jungle, tropical plants, bright sunlight, 3D cartoon style."],
+["Mountain Warrior","Fantasy",
+"A young warrior standing on a mountain during sunset, dramatic clouds, wind blowing clothes, cinematic fantasy cartoon style.",
+"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"],
 
-["Magic Library",
-"Fantasy",
-"A magical library filled with floating books, glowing candles and mysterious magical lights, fantasy cartoon artwork."],
+["Cute Dinosaur","Animal",
+"A friendly baby dinosaur walking through a colorful prehistoric jungle, tropical plants, bright sunlight, 3D cartoon style.",
+"https://images.unsplash.com/photo-1525877442103-5ddb2089b2b6?auto=format&fit=crop&w=900&q=80"],
 
-["Cloud Puppy",
-"Animal",
-"A cute puppy sleeping peacefully on a fluffy cloud surrounded by stars and moonlight, dreamy 3D cartoon style."],
+["Magic Library","Fantasy",
+"A magical library filled with floating books, glowing candles and mysterious magical lights, fantasy cartoon artwork.",
+"https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80"],
 
-["Future City",
-"Space",
-"A futuristic city with flying buildings, neon lights and advanced technology, colorful cinematic cyber cartoon style."],
+["Cloud Puppy","Animal",
+"A cute puppy sleeping peacefully on a fluffy cloud surrounded by stars and moonlight, dreamy 3D cartoon style.",
+"https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80"],
 
-["Rainbow Castle",
-"Fantasy",
-"A beautiful fairy castle surrounded by rainbow clouds, magical atmosphere, glowing lights, colorful fantasy art."],
+["Future City","Space",
+"A futuristic city with flying buildings, neon lights and advanced technology, colorful cinematic cyber cartoon style.",
+"https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"],
 
-["Magic Squirrel",
-"Animal",
-"A cute squirrel collecting glowing magical nuts in an enchanted forest, colorful mushrooms, fantasy 3D animation."],
+["Rainbow Castle","Fantasy",
+"A beautiful fairy castle surrounded by rainbow clouds, magical atmosphere, glowing lights, colorful fantasy art.",
+"https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=80"],
 
-["Alien Flower",
-"Space",
-"A young astronaut discovering a giant glowing alien flower on another planet, beautiful mountains, cinematic fantasy lighting."],
+["Magic Squirrel","Animal",
+"A cute squirrel collecting glowing magical nuts in an enchanted forest, colorful mushrooms, fantasy 3D animation.",
+"https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80"],
 
-["Rainbow Panda",
-"Animal",
-"A cute panda standing under a beautiful rainbow after rain, colorful landscape, soft sunlight, adorable 3D cartoon art."],
+["Alien Flower","Space",
+"A young astronaut discovering a giant glowing alien flower on another planet, beautiful mountains, cinematic fantasy lighting.",
+"https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=900&q=80"],
 
-["Flying Dragon",
-"Fantasy",
-"A magnificent magical dragon flying above huge mountains during sunset, glowing wings, dramatic clouds, cinematic fantasy art."]
+["Rainbow Panda","Animal",
+"A cute panda standing under a beautiful rainbow after rain, colorful landscape, soft sunlight, adorable 3D cartoon art.",
+"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=900&q=80"],
 
-];
+["Flying Dragon","Fantasy",
+"A magnificent magical dragon flying above huge mountains during sunset, glowing wings, dramatic clouds, cinematic fantasy art.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
 
-let currentCategory = "All";
+/* ---------- 150 NEW PROMPTS ---------- */
 
-function startApp(){
-    document.getElementById("home").style.display="none";
-    document.getElementById("app").style.display="block";
-    showPrompts();
-    window.scrollTo(0,0);
-}
+["Cute Cartoon Girl","Cartoon","A cute cartoon girl holding colorful balloons in a beautiful park, bright sunlight, flowers, soft 3D animation style.",
+"https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=80"],
 
-function goHome(){
-    document.getElementById("app").style.display="none";
-    document.getElementById("home").style.display="flex";
-    window.scrollTo(0,0);
-}
+["Robot Friend","Cartoon","A small friendly robot playing with children in a colorful futuristic playground, happy expressions, cinematic 3D style.",
+"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80"],
 
-function setCategory(category,button){
+["Cartoon Village","Cartoon","A colorful cartoon village surrounded by green hills, tiny houses, flowers and warm morning sunlight.",
+"https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"],
 
-    currentCategory=category;
+["Toy City","Cartoon","A magical city made completely from colorful toys, tiny cars, buildings and happy cartoon characters.",
+"https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"],
 
-    document.querySelectorAll(".categories button")
-    .forEach(b=>b.classList.remove("active"));
+["Funny Monster","Cartoon","A funny purple monster wearing a yellow hat inside a colorful bedroom, cute expression, soft 3D cartoon lighting.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
 
-    button.classList.add("active");
+["Cartoon School","Cartoon","A beautiful colorful cartoon school surrounded by trees, children walking outside, sunny sky, 3D animation style.",
+"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"],
 
-    showPrompts();
-}
+["Magic Painter","Cartoon","A young cartoon artist painting magical stars that come alive from the canvas, colorful studio, cinematic lighting.",
+"https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80"],
 
-function showPrompts(){
+["Tiny Chef","Cartoon","A tiny cartoon chef cooking inside a miniature kitchen, colorful utensils, funny expression, detailed 3D style.",
+"https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80"],
 
-    const search =
-    document.getElementById("search").value.toLowerCase();
+["Cartoon Train","Cartoon","A colorful cartoon train traveling through green mountains under a bright blue sky, playful 3D animation.",
+"https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=900&q=80"],
 
-    const list =
-    document.getElementById("promptList");
+["Happy Family","Cartoon","A happy cartoon family having a picnic in a colorful park, flowers, trees, warm sunlight and joyful expressions.",
+"https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=900&q=80"],
 
-    list.innerHTML="";
+["Fairy Princess","Fantasy","A magical fairy princess standing in a glowing forest surrounded by fireflies and colorful flowers, fantasy art.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
 
-    let found=0;
+["Crystal Cave","Fantasy","A mysterious crystal cave filled with glowing blue crystals, magical mist and sparkling particles.",
+"https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80"],
 
-    prompts.forEach((item,index)=>{
+["Magic Waterfall","Fantasy","A giant magical waterfall surrounded by glowing flowers and floating rocks, dreamy fantasy environment.",
+"https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80"],
 
-        const title=item[0];
-        const category=item[1];
-        const prompt=item[2];
+["Enchanted Forest","Fantasy","A beautiful enchanted forest with glowing trees, colorful mushrooms, magical lights and misty atmosphere.",
+"https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"],
 
-        const matchesSearch =
-        title.toLowerCase().includes(search) ||
-        prompt.toLowerCase().includes(search);
+["Golden Palace","Fantasy","A magnificent golden fantasy palace on a mountain surrounded by clouds, glowing windows and dramatic sunset.",
+"https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80"],
 
-        const matchesCategory =
-        currentCategory==="All" ||
-        category===currentCategory;
+["Magic Bridge","Fantasy","A glowing magical bridge crossing a river in an enchanted forest at night, stars and fireflies everywhere.",
+"https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"],
 
-        if(matchesSearch && matchesCategory){
+["Fairy Village","Fantasy","A tiny fairy village hidden among giant flowers, glowing houses, magical lanterns and colorful butterflies.",
+"https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80"],
 
-            found++;
+["Dragon Castle","Fantasy","A powerful dragon guarding a giant fantasy castle on a mountain, stormy sky, cinematic dramatic lighting.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
 
-            const card=document.createElement("div");
+["Magic Sword","Fantasy","A glowing magical sword floating above an ancient stone altar in an enchanted forest, fantasy cinematic art.",
+"https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80"],
 
-            card.className="card";
+["Fantasy Water City","Fantasy","A beautiful fantasy city built over crystal blue water, magical bridges, glowing towers and colorful skies.",
+"https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"],
 
-            card.innerHTML=`
-                <h2>✨ ${index+1}. ${title}</h2>
+["Cute Tiger","Animal","A cute baby tiger sitting in a colorful jungle surrounded by flowers and butterflies, adorable 3D cartoon style.",
+"https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=900&q=80"],
 
-                <span class="badge">${category}</span>
+["Baby Lion","Animal","An adorable baby lion sitting in a grassy field during golden sunset, soft light, detailed cinematic portrait.",
+"https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80"],
 
-                <div class="prompt">${prompt}</div>
+["Cute Deer","Animal","A cute deer standing in a magical forest with flowers, morning mist, warm sunlight and dreamy atmosphere.",
+"https://images.unsplash.com/photo-1484406566174-9da000fda645?auto=format&fit=crop&w=900&q=80"],
 
-                <button class="copy"
-                onclick="copyText(this)">
-                📋 Copy Prompt
-                </button>
-            `;
+["Baby Bear","Animal","A cute baby bear playing beside a river in a green forest, soft sunlight, adorable 3D cartoon appearance.",
+"https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80"],
 
-            list.appendChild(card);
-        }
+["Cute Wolf","Animal","A friendly cartoon wolf standing on a snowy mountain under moonlight, cinematic fantasy environment.",
+"https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80"],
 
-    });
+["Parrot Jungle","Animal","A colorful parrot sitting on a tropical tree surrounded by flowers and green leaves, bright sunlight.",
+"https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&w=900&q=80"],
 
-    if(found===0){
+["Cute Koala","Animal","An adorable koala sitting on a eucalyptus tree, soft morning light, detailed fur, peaceful expression.",
+"https://images.unsplash.com/photo-1459262838948-3e2de6c1ec80?auto=format&fit=crop&w=900&q=80"],
 
-        list.innerHTML=`
-        <div class="no-result">
-            😕<br><br>
-            No prompt found.
-        </div>
-        `;
+["Baby Giraffe","Animal","A cute baby giraffe walking through a sunny African grassland, colorful flowers and warm cinematic lighting.",
+"https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=900&q=80"],
 
-    }
+["Funny Duck","Animal","A funny yellow duck wearing tiny sunglasses beside a pond, colorful flowers, cheerful cartoon style.",
+"https://images.unsplash.com/photo-1555852095-64e7428d7c5b?auto=format&fit=crop&w=900&q=80"],
 
-}
+["Cute Horse","Animal","A beautiful white horse running through a flower field at sunset, flowing mane, cinematic dreamy lighting.",
+"https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=900&q=80"],
 
-function copyText(button){
+["Mars Explorer","Space","A futuristic astronaut exploring the surface of Mars, red mountains, distant planet, cinematic space lighting.",
+"https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=900&q=80"],
 
-    const text =
-    button.parentElement.querySelector(".prompt").innerText;
+["Space Rocket","Space","A colorful rocket launching into space with glowing engines, Earth in the background and countless stars.",
+"https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=900&q=80"],
 
-    /* Modern clipboard */
-    if(navigator.clipboard){
+["Moon Base","Space","A futuristic moon base with glowing buildings, astronauts walking outside, Earth visible in the sky.",
+"https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=900&q=80"],
 
-        navigator.clipboard.writeText(text)
-        .then(()=>{
-            copied(button);
-        })
-        .catch(()=>{
-            oldCopy(text,button);
-        });
+["Galaxy Planet","Space","A beautiful alien planet surrounded by colorful galaxies, giant rings, stars and cosmic clouds.",
+"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80"],
 
-    }else{
+["Space Warrior","Space","A futuristic space warrior standing on an alien planet with glowing armor and dramatic cosmic background.",
+"https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=900&q=80"],
 
-        oldCopy(text,button);
+["Astronaut Garden","Space","An astronaut discovering a colorful garden growing inside a futuristic space station, glowing plants and flowers.",
+"https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=900&q=80"],
 
-    }
-}
+["Saturn Rings","Space","A tiny astronaut floating near Saturn with its beautiful rings visible behind, cinematic cosmic lighting.",
+"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80"],
 
-function oldCopy(text,button){
+["Space Whale","Space","A giant magical whale swimming through outer space between planets and stars, dreamy fantasy cosmic art.",
+"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80"],
 
-    const area=document.createElement("textarea");
+["Cosmic Castle","Space","A giant futuristic castle floating in deep space surrounded by planets, stars and colorful nebulae.",
+"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80"],
 
-    area.value=text;
+["Alien Village","Space","A colorful alien village on another planet with strange plants, glowing houses and two moons in the sky.",
+"https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=900&q=80"],
 
-    area.style.position="fixed";
-    area.style.left="-9999px";
+["Sunset Portrait","Cartoon","A stylish cartoon character standing during golden hour, warm sunlight, beautiful background and cinematic portrait.",
+"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"],
 
-    document.body.appendChild(area);
+["Colorful Bicycle","Cartoon","A cute cartoon child riding a colorful bicycle through a flower-filled village, bright sunny day.",
+"https://images.unsplash.com/photo-1502744688674-c619d1586c9e?auto=format&fit=crop&w=900&q=80"],
 
-    area.focus();
-    area.select();
+["Magic Balloon","Fantasy","A child flying through the sky holding magical balloons, clouds below, colorful sunset and dreamy fantasy style.",
+"https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=80"],
 
-    try{
-        document.execCommand("copy");
-        copied(button);
-    }
-    catch(e){
-        alert("Prompt select karke manually copy karo.");
-    }
+["Rainbow Road","Fantasy","A magical rainbow road leading toward a glowing castle in the clouds, colorful dreamy fantasy environment.",
+"https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=80"],
 
-    document.body.removeChild(area);
-}
+["Crystal Dragon","Fantasy","A magnificent crystal dragon standing inside a glowing cave, colorful crystals, magical particles and cinematic lighting.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
 
-function copied(button){
+["Magic Book","Fantasy","An ancient magical book floating above a wooden table, glowing symbols, candles and mysterious atmosphere.",
+"https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80"],
 
-    button.innerText="✅ Copied!";
+["Fairy Lake","Fantasy","A peaceful magical lake surrounded by glowing flowers and fairy lights, mountains reflected in crystal water.",
+"https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80"],
 
-    setTimeout(()=>{
-        button.innerText="📋 Copy Prompt";
-    },1500);
-}
+["Castle Garden","Fantasy","A royal fantasy garden beside a huge castle, colorful flowers, fountains, butterflies and golden sunlight.",
+"https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80"],
 
-</script>
+["Forest Guardian","Fantasy","A mysterious forest guardian standing among giant trees with glowing eyes and magical green particles.",
+"https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"],
 
-</body>
-</html>
+["Ice Warrior","Fantasy","A powerful warrior wearing glowing ice armor standing on a frozen mountain under a blue sky.",
+"https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?auto=format&fit=crop&w=900&q=80"],
+
+["Magic Unicorn","Fantasy","A beautiful white unicorn standing beside a glowing waterfall in an enchanted forest, rainbow light and flowers.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
+
+["Unicorn Castle","Fantasy","A magical unicorn running toward a colorful castle surrounded by rainbow clouds and glowing flowers.",
+"https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=80"],
+
+["Forest Fairy House","Fantasy","A tiny fairy house built inside a giant tree, glowing windows, flowers, mushrooms and magical lights.",
+"https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"],
+
+["Golden Dragon","Fantasy","A golden dragon flying over a fantasy kingdom at sunset, glowing scales, huge mountains and dramatic clouds.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
+
+["Magic Mountain","Fantasy","A giant magical mountain floating above the clouds with waterfalls, glowing trees and a fantasy castle.",
+"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"],
+
+["Cute Hamster","Animal","A cute hamster sitting inside a tiny colorful house, eating a strawberry, adorable 3D cartoon style.",
+"https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=900&q=80"],
+
+["Baby Monkey","Animal","A cute baby monkey hanging from a tree branch in a tropical jungle, bright sunlight and adorable expression.",
+"https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=900&q=80"],
+
+["Cute Owl","Animal","A cute little owl sitting on a magical tree branch at night, glowing moon, stars and fireflies.",
+"https://images.unsplash.com/photo-1470118085217-5f5b6b2b7a58?auto=format&fit=crop&w=900&q=80"],
+
+["Colorful Fish","Animal","A beautiful colorful fish swimming through a bright coral reef, glowing underwater plants and cinematic lighting.",
+"https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80"],
+
+["Sea Turtle","Animal","A peaceful sea turtle swimming through clear blue ocean water surrounded by colorful coral reefs.",
+"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"],
+
+["Cute Rabbit","Animal","A fluffy white rabbit sitting in a colorful flower garden, soft sunlight and adorable cinematic portrait.",
+"https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=900&q=80"],
+
+["Cute Panda Forest","Animal","A cute panda walking through a bamboo forest with sunlight rays, soft mist and peaceful atmosphere.",
+"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=900&q=80"],
+
+["Baby Zebra","Animal","A cute baby zebra standing in a green grassland with mountains behind, warm sunset and cinematic lighting.",
+"https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80"],
+
+["Flamingo Lake","Animal","A group of beautiful pink flamingos standing beside a peaceful lake during golden sunset.",
+"https://images.unsplash.com/photo-1497206365907-f5e630693df0?auto=format&fit=crop&w=900&q=80"],
+
+["Butterfly Garden","Animal","Hundreds of colorful butterflies flying over a beautiful flower garden in warm morning sunlight.",
+"https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80"],
+
+["Space Dog","Space","A cute astronaut dog exploring the moon wearing a tiny space suit, Earth visible behind, adorable 3D style.",
+"https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=900&q=80"],
+
+["Space Cat","Space","A cute astronaut cat floating inside a futuristic spaceship with planets visible through the window.",
+"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=900&q=80"],
+
+["Rocket Dog","Space","A cute dog sitting inside a colorful rocket flying toward a distant planet, stars and cosmic clouds.",
+"https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=900&q=80"],
+
+["Galaxy Girl","Space","A beautiful futuristic girl standing inside a colorful galaxy, glowing stars, planets and cinematic lighting.",
+"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80"],
+
+["Cosmic Ocean","Space","A giant cosmic ocean floating in space with glowing waves, planets above and magical blue light.",
+"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80"],
+
+["Moon Village","Space","A colorful village built on the moon with tiny futuristic houses, astronauts and Earth in the background.",
+"https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=900&q=80"],
+
+["Space Garden","Space","A beautiful garden growing on an alien planet with glowing flowers, colorful mountains and two moons.",
+"https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=900&q=80"],
+
+["Galaxy Train","Space","A futuristic glowing train traveling between planets through deep space, colorful stars and nebulae.",
+"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80"],
+
+["Alien Robot","Space","A friendly robot meeting cute aliens on a colorful planet, strange plants, mountains and bright cosmic sky.",
+"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80"],
+
+["Space City","Space","A massive futuristic city built on another planet, flying vehicles, neon towers and glowing streets.",
+"https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"],
+
+["Cartoon Beach","Cartoon","A colorful cartoon beach with children playing, palm trees, blue ocean, bright sky and cheerful atmosphere.",
+"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"],
+
+["Cartoon Park","Cartoon","A beautiful colorful park with slides, trees, flowers and happy cartoon children playing together.",
+"https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"],
+
+["Candy World","Cartoon","A magical cartoon world made from colorful candies, chocolate houses, candy trees and a bright sky.",
+"https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=900&q=80"],
+
+["Toy Robot","Cartoon","A cute toy robot standing inside a colorful bedroom surrounded by toys, soft lights and cheerful atmosphere.",
+"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80"],
+
+["Cartoon Car","Cartoon","A cute colorful cartoon car driving through a bright city street, happy characters, sunny sky and 3D style.",
+"https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80"],
+
+["Magic School","Fantasy","A giant magical school floating above the clouds, glowing windows, students flying on magical books.",
+"https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80"],
+
+["Wizard Tower","Fantasy","A tall wizard tower surrounded by glowing clouds and magical birds during a purple sunset.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
+
+["Fairy Waterfall","Fantasy","A glowing fairy sitting beside a magical waterfall surrounded by flowers, butterflies and mist.",
+"https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80"],
+
+["Magic Moon","Fantasy","A giant glowing moon above an enchanted forest, magical lake reflections and thousands of fireflies.",
+"https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80"],
+
+["Fantasy Boat","Fantasy","A magical wooden boat sailing through glowing blue water under a sky filled with stars and floating islands.",
+"https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"],
+
+["Dragon Lake","Fantasy","A majestic dragon standing beside a crystal lake surrounded by mountains and glowing magical plants.",
+"https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80"],
+
+["Magic Forest Path","Fantasy","A glowing pathway leading through an enchanted forest toward a mysterious castle, colorful lights and mist.",
+"https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"],
+
+["Royal Princess","Fantasy","A beautiful royal princess standing on a palace balcony overlooking a magical kingdom at sunset.",
+"https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80"],
+
+["Crystal Palace","Fantasy","A magnificent palace made of glowing crystals surrounded by snowy mountains and colorful northern lights.",
+"https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?auto=format&fit=crop&w=900&q=80"],
+
+["Jungle Tiger","Animal","A powerful tiger walking through a lush tropical jungle with sunlight rays and misty atmosphere.",
+"https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=900&q=80"],
+
+["Elephant Sunset","Animal","A majestic elephant walking across a beautiful African landscape during golden sunset.",
+"https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=900&q=80"],
+
+["Fox Snow","Animal","A cute red fox walking through fresh snow in a peaceful forest, soft winter light and cinematic atmosphere.",
+"https://images.unsplash.com/photo-1516934024742-b461fba47600?auto=format&fit=crop&w=900&q=80"],
+
+["Bear Mountain","Animal","A large bear standing near a mountain lake surrounded by pine trees during sunrise.",
+"https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80"],
+
+["Wolf Moon","Animal","A beautiful wolf standing on a snowy mountain under a giant full moon, dramatic cinematic lighting.",
+"https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80"],
+
+["Horse Valley","Animal","A white horse running through a green mountain valley with flowers and golden sunlight.",
+"https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=900&q=80"],
+
+["Giraffe Sunset","Animal","A tall giraffe walking across an African landscape with orange sunset sky and distant mountains.",
+"https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=900&q=80"],
+
+["Cute Duck Pond","Animal","A group of cute ducks swimming in a peaceful pond surrounded by colorful flowers and green trees.",
+"https://images.unsplash.com/photo-1555852095-64e7428d7c5b?auto=format&fit=crop&w=900&q=80"],
+
+["Owl Night","Animal","A beautiful owl sitting on a tree branch under a starry night sky, moonlight and magical atmosphere.",
+"https://images.unsplash.com/photo-1470118085217-5f5b6b2b7a58?auto=format&fit=crop&w=900&q=80"],
+
+["Space Planet","Space","A beautiful blue alien planet surrounded by rings, colorful nebula and millions of stars.",
+"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80"],
+
+["Rocket Launch","Space","A huge futuristic rocket launching from a glowing spaceport into a colorful star-filled sky.",
+"https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=900&q=80"],
+
+["Astronaut City","Space","An astronaut walking through a futuristic city on Mars with neon buildings and glowing roads.",
+"https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=900&q=80"],
+
+["Galaxy Castle","Space","A giant castle floating in a colorful galaxy surrounded by planets, stars and glowing cosmic clouds.",
+"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80"],
+
+["Moon Car","Space","A futuristic moon vehicle driving across the lunar surface with Earth rising in the background.",
+"https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=900&q=80"],
+
+["Alien Forest","Space","A mysterious alien forest filled with giant glowing plants, strange creatures and colorful mountains.",
+"https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=900&q=80"],
+
+["Space Explorer","Space","A young space explorer standing on an alien mountain looking at a giant colorful planet in the sky.",
+"https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=900&q=80"],
+
+["Cosmic Butterfly","Space","A giant glowing butterfly flying through space between colorful planets and stars, magical cosmic art.",
+"https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80"],
+
+["Future Robot City","Space","A friendly robot walking through a huge futuristic city filled with neon signs, flying cars and glowing towers.",
+"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80"],
+
+["Space Adventure","Space","A group of young astronauts exploring a mysterious planet with colorful mountains and strange plants.",
+"https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=900&q=80"],
+
+["Magic Castle","Fantasy","A giant magical castle surrounded by glowing clouds, waterfalls, flowers and a beautiful rainbow.",
+"https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=80"],
+
+["Fairy Forest","Fantasy","A beautiful fairy flying through a colorful forest filled with glowing flowers, butterflies and magical particles.",
+"https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"],
+
+["Dragon Mountain","Fantasy","A giant dragon resting on top of a mountain while clouds move around it, dramatic sunset and cinematic fantasy style.",
+"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"],
+
+["Magic River","Fantasy","A glowing magical river flowing through an enchanted forest at night with fireflies and colorful plants.",
+"https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=80"],
+
+["Fantasy Garden","Fantasy","A royal fantasy garden filled with colorful flowers, glowing fountains, butterflies and magical sunlight.",
+"https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80"],
+
+["Cloud Kingdom","Fantasy","A beautiful kingdom floating above clouds with magical castles, bridges and glowing waterfalls.",
+"https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=80"],
+
+["Magic Tree House","Fantasy","A cozy house built inside a giant magical tree, glowing windows, flowers and tiny lanterns.",
+"https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"],
+
+["Fantasy Knight","Fantasy","A brave knight standing outside a magical castle with glowing armor, dramatic clouds and cinematic lighting.",
+"https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80"],
+
+["Rainbow Dragon","Fantasy","A colorful dragon flying above a rainbow valley with glowing wings, magical clouds and cinematic fantasy scenery.",
+"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"],
+
+["Enchanted Castle","Fantasy","An ancient enchanted castle hidden deep inside a magical forest, glowing windows and mysterious fog.",
+"https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"],
+
+["Magic Snow Forest","Fantasy","A beautiful snowy forest with glowing trees, magical animals and colorful northern lights.",
+"https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?auto=format&fit=crop&w=900&q=80"],
+
+["Fantasy Sunrise","Fantasy","A magical sunrise over mountains, floating islands, glowing waterfalls and colorful clouds.",
+"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"],
+
+["Cartoon Garden","Cartoon","A cheerful cartoon garden filled with giant flowers, cute animals, butterflies and colorful houses.",
+"https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w
